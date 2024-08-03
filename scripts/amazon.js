@@ -1,3 +1,5 @@
+import { cart } from '../data/cart.js';
+
 let productsHTML = ""; // This is the variable that will hold the HTML for all the products
 
 products.forEach((product) => {
@@ -77,6 +79,7 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
         quantity: 1
       });
     }
+    
     let cartQuantity = 0;
 
     cart.forEach((item) => {
