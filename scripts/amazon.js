@@ -1,4 +1,5 @@
 import { cart } from '../data/cart.js';
+import { products } from '../data/products.js';
 
 let productsHTML = ""; // This is the variable that will hold the HTML for all the products
 
