@@ -6,6 +6,10 @@ export let cart = [{
   quantity: 1,
 }];
 
+function saveToStroage() {
+   localStorage.setItem('cart', JSON.stringify(cart)) // Save the cart to local storage
+}
+
 export function addToCart(productId) {
     let matchingItem;
   
@@ -24,7 +28,7 @@ export function addToCart(productId) {
       });
     }
   }
-
+saveToStroage(); // Call the function to save the cart to local storage
   export function removeFromCart(productId) {
     const newCart = [];
 
@@ -35,4 +39,6 @@ export function addToCart(productId) {
     });
 
     cart = newCart; // Update the cart with the new cart, its outside the scope of the forEach loop because we want to update the cart after the loop is done
+
+    saveToStroage(); // Save the updated cart to local storage
   }
