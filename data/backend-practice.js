@@ -5,5 +5,5 @@ xhr.addEventListener('load',() => {
   console.log(xhr.status);
 });
 
-xhr.open('GET','https://supersimplebackend.dev/not-supported');
+xhr.open('GET','https://supersimplebackend.dev');
 xhr.send();
